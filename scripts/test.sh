@@ -449,6 +449,7 @@ apidoc)
 sonarcloud)
 	sonar-scanner \
 		-Dsonar.projectKey=strongswan \
+		-Dsonar.organization=${SONAR_ORGANIZATION} \
 		-Dsonar.projectVersion=$(git describe)+${TRAVIS_BUILD_NUMBER} \
 		-Dsonar.sources=. \
 		-Dsonar.cfamily.threads=2 \
